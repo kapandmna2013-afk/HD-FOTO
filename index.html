@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b12">
+<title>HD Studio — Foto & Video</title>
+<style>
+:root{--bg:#080b12;--panel:#111725;--panel2:#171f30;--line:#293247;--text:#f4f7ff;--muted:#9ba8c0;--purple:#8d7bff;--cyan:#39d9f2;--green:#6ef0b5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#5c47bc24,transparent 38%),radial-gradient(ellipse at 100% 40%,#16a9bd12,transparent 34%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1100px,calc(100% - 28px));margin:auto}.top{padding:25px 0 18px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px}.logo{width:45px;height:45px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--purple),var(--cyan));color:#090b12;font-size:1.45rem;font-weight:900;box-shadow:0 8px 30px #6b7dff38}.brand h1{font-size:1.3rem;line-height:1.2;margin:0}.brand p{margin:4px 0 0;color:var(--muted);font-size:.85rem}.hero{padding:34px 0 22px}.eyebrow{display:inline-block;border:1px solid #8d7bff55;background:#8d7bff12;color:#c8c0ff;border-radius:99px;padding:5px 10px;font-size:.78rem;font-weight:700}.hero h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.08;letter-spacing:-.055em;margin:16px 0}.gradient{background:linear-gradient(100deg,#fff,#b4a8ff 48%,#43e0f2);background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:680px;margin:0}.tabs{display:flex;gap:9px;margin:18px 0 22px;flex-wrap:wrap}.tab{border:1px solid var(--line);background:#ffffff04;color:var(--muted);padding:10px 16px;border-radius:12px;font-weight:750}.tab.active{background:linear-gradient(120deg,#8d7bff32,#39d9f21c);border-color:#8d7bff88;color:white}.panel{background:linear-gradient(145deg,#ffffff08,#ffffff03);border:1px solid var(--line);border-radius:20px;padding:clamp(16px,3vw,25px);box-shadow:0 20px 65px #0002}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.drop{border:1.5px dashed #46516b;border-radius:16px;min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;gap:8px;background:#080c15;transition:.2s}.drop:hover,.drop.drag{border-color:var(--cyan);background:#39d9f20a}.drop .symbol{font-size:2.4rem}.drop strong{font-size:1.05rem}.muted{color:var(--muted);font-size:.9rem}.file{display:none}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:11px;padding:11px 15px;background:#ffffff08;color:var(--text);font-weight:750}.btn.primary{background:linear-gradient(115deg,var(--purple),#5d64ee);border:0;color:white}.btn:disabled{opacity:.4;cursor:not-allowed}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}.control{display:grid;gap:7px}.control label{font-size:.88rem;font-weight:700}.control select,.control input[type=range]{width:100%}.control select{background:#0b101b;color:var(--text);border:1px solid var(--line);padding:10px;border-radius:10px}.control input[type=range]{accent-color:var(--purple)}.range-row{display:flex;justify-content:space-between;color:var(--muted);font-size:.82rem}.preview{margin-top:18px}.preview h3{font-size:1rem;margin:0 0 10px}.previewbox{min-height:190px;border:1px solid var(--line);border-radius:14px;background:#070a10;display:grid;place-items:center;overflow:hidden;padding:10px}.previewbox img,.previewbox video,.previewbox canvas{display:block;max-width:100%;max-height:420px;object-fit:contain}.previewbox video{width:100%}.empty{color:#6f7b91;text-align:center;padding:25px}.info{padding:12px 14px;border-radius:12px;background:#39d9f20b;border:1px solid #39d9f226;color:#aebbd0;font-size:.85rem;margin-top:14px}.status{margin-top:14px;font-size:.9rem;color:var(--green);overflow-wrap:anywhere}.meter{height:6px;background:#ffffff12;border-radius:99px;overflow:hidden;margin-top:9px}.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--purple),var(--cyan));transition:width .2s}.section-title{font-size:1.1rem;margin:0 0 14px}.footer{padding:26px 0 35px;color:var(--muted);font-size:.82rem;text-align:center}.ig-link{display:inline-flex;align-items:center;gap:7px;margin-top:10px;color:#d8cfff;text-decoration:none;border:1px solid #8d7bff55;border-radius:999px;padding:8px 13px}.ig-link:hover{background:#8d7bff18}.hide{display:none!important}.tiny{font-size:.78rem;color:var(--muted)}.owner-btn{margin-left:auto;white-space:nowrap}.owner-overlay{position:fixed;inset:0;background:#03050bdc;backdrop-filter:blur(8px);z-index:50;display:grid;place-items:center;padding:16px}.owner-box{width:min(520px,100%);max-height:90vh;overflow:auto;background:#111725;border:1px solid #39445e;border-radius:20px;padding:22px;box-shadow:0 25px 100px #0009}.owner-box h2{margin:0 0 6px}.owner-box p{color:var(--muted);font-size:.9rem}.owner-box input,.owner-box select{width:100%;background:#0b101b;color:var(--text);border:1px solid var(--line);padding:11px;border-radius:10px}.owner-fields{display:grid;gap:12px}.owner-fields label{display:grid;gap:6px;font-size:.88rem;font-weight:700}.owner-note{font-size:.78rem;color:var(--muted)}@media(max-width:760px){.grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr 1fr}.hero{padding-top:26px}.previewbox img,.previewbox video,.previewbox canvas{max-height:320px}}@media(max-width:420px){.controls{grid-template-columns:1fr}.actions .btn{flex:1}.brand h1{font-size:1.12rem}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap brand"><div class="logo">HD</div><div><h1 id="appHeading">HD Studio <span style="color:var(--cyan)">/</span> Foto & Video</h1><p id="ownerSubtitle">Upscale lokal di browser • File tetap di perangkatmu</p></div><button class="btn owner-btn" id="ownerOpenBtn">⚙ Owner</button></div></header>
+<main class="wrap">
+<section class="hero"><span class="eyebrow">✦ TOOL GRATIS • TANPA UPLOAD SERVER</span><h2>Bikin foto dan video<br><span class="gradient">tampak lebih tajam.</span></h2><p>Perbesar resolusi foto, atur ketajaman dan kualitas ekspor. Video dapat diekspor ulang dengan ukuran frame lebih besar. Hasilnya bergantung pada kualitas file asli—ini bukan AI yang bisa menciptakan detail yang hilang.</p></section>
+<div class="tabs" role="tablist"><button class="tab active" id="photoTab" role="tab" aria-selected="true">▧ Foto HD</button><button class="tab" id="videoTab" role="tab" aria-selected="false">▷ Video HD</button></div>
+
+<section id="photoPanel" class="panel">
+  <h3 class="section-title">01 / Tingkatkan foto</h3>
+  <div class="grid">
+    <div>
+      <label class="drop" id="imageDrop" for="imageInput"><span class="symbol">▧</span><strong>Pilih foto dari perangkat</strong><span class="muted">JPG, PNG, WEBP • atau seret file ke sini</span><span class="btn">Pilih Foto</span></label>
+      <input class="file" id="imageInput" type="file" accept="image/*">
+      <div class="controls">
+        <div class="control"><label for="scaleSelect">Resolusi output</label><select id="scaleSelect"><option value="2">2× ukuran asli</option><option value="3">3× ukuran asli</option><option value="4">4× ukuran asli</option><option value="1080">Sisi panjang 1080 px</option><option value="1920">Sisi panjang 1920 px</option></select></div>
+        <div class="control"><label for="formatSelect">Format ekspor</label><select id="formatSelect"><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/webp">WEBP</option></select></div>
+        <div class="control"><label for="sharpRange">Ketajaman</label><div class="range-row"><span>Lembut</span><strong id="sharpVal">35%</strong></div><input id="sharpRange" type="range" min="0" max="100" value="35"></div>
+        <div class="control"><label for="qualityRange">Kualitas JPG/WEBP</label><div class="range-row"><span>Lebih kecil</span><strong id="qualityVal">92%</strong></div><input id="qualityRange" type="range" min="50" max="100" value="92"></div>
+      </div>
+      <div class="actions"><button class="btn primary" id="enhanceBtn" disabled>✦ Proses Foto</button><button class="btn" id="resetPhotoBtn">Reset</button></div>
+      <div class="status" id="photoStatus" aria-live="polite"></div><div class="meter"><span id="photoMeter"></span></div>
+    </div>
+    <div class="preview">
+      <h3>Pratinjau foto</h3><div class="previewbox" id="imagePreview"><div class="empty">Foto asli akan tampil di sini.</div></div>
+      <div class="info" id="imageInfo">Pilih foto untuk melihat ukuran asli dan perkiraan ukuran output.</div>
+      <div class="previewbox" id="imageResult" style="margin-top:12px"><div class="empty">Hasil HD akan muncul di sini.</div></div>
+      <div class="actions"><button class="btn primary" id="downloadImageBtn" disabled>⬇ Simpan Foto HD</button></div>
+    </div>
+  </div>
+</section>
+
+<section id="videoPanel" class="panel hide">
+  <h3 class="section-title">02 / Tingkatkan resolusi video</h3>
+  <div class="grid">
+    <div>
+      <label class="drop" id="videoDrop" for="videoInput"><span class="symbol">▷</span><strong>Pilih video dari perangkat</strong><span class="muted">MP4, WEBM, dan format yang didukung browser</span><span class="btn">Pilih Video</span></label>
+      <input class="file" id="videoInput" type="file" accept="video/*">
+      <div class="controls">
+        <div class="control"><label for="videoResolution">Resolusi ekspor</label><select id="videoResolution"><option value="720">HD 720p</option><option value="1080" selected>Full HD 1080p</option><option value="1440">2K 1440p</option><option value="2160">4K 2160p</option><option value="2x">2× resolusi asli (maks 2160p)</option></select></div>
+        <div class="control"><label for="videoFps">Frame rate</label><select id="videoFps"><option value="24">24 FPS</option><option value="30" selected>30 FPS</option><option value="60">60 FPS</option></select></div>
+        <div class="control"><label for="videoBitrate">Bitrate video</label><select id="videoBitrate"><option value="4">4 Mbps • hemat</option><option value="8" selected>8 Mbps • seimbang</option><option value="16">16 Mbps • tinggi</option><option value="25">25 Mbps • sangat tinggi</option></select></div>
+      </div>
+      <div class="actions"><button class="btn primary" id="processVideoBtn" disabled>▷ Ekspor Video HD</button><button class="btn" id="stopVideoBtn" disabled>Hentikan</button></div>
+      <div class="status" id="videoStatus" aria-live="polite"></div><div class="meter"><span id="videoMeter"></span></div>
+      <div class="info">Ekspor video berjalan secara real-time: video berdurasi 1 menit dapat memerlukan sekitar 1 menit atau lebih. Browser umumnya menyimpan hasil sebagai WEBM. Audio dicoba dipertahankan jika didukung browser.</div>
+    </div>
+    <div class="preview">
+      <h3>Video asli</h3><div class="previewbox" id="videoPreview"><div class="empty">Video yang dipilih akan tampil di sini.</div></div>
+      <div class="preview" style="margin-top:16px"><h3>Video hasil ekspor</h3><div class="previewbox" id="videoResult"><div class="empty">Hasil ekspor akan muncul di sini.</div></div><div class="actions"><a class="btn primary" id="downloadVideoBtn" href="#" download="video-hd.webm" style="pointer-events:none;opacity:.45">⬇ Simpan Video HD</a></div></div>
+    </div>
+  </div>
+</section>
+<section class="info" style="margin-top:18px;margin-bottom:22px"><strong>Catatan kualitas:</strong> Upscaling memperbesar jumlah piksel dan penajaman meningkatkan kesan detail, tetapi tidak selalu memulihkan detail yang tidak ada di sumber. Pemrosesan file besar dapat membuat browser atau HP lambat; coba resolusi lebih rendah jika perangkat kehabisan memori.</section>
+</main>
+<footer class="footer"><div><span id="footerBrand">HD Studio</span> · Pemrosesan dilakukan di browser perangkat ini · © <span id="year"></span></div><div id="instagramPublic"></div></footer>
+<div id="ownerOverlay" class="owner-overlay hide" role="dialog" aria-modal="true" aria-labelledby="ownerModalTitle"><div class="owner-box"><h2 id="ownerModalTitle">⚙ Owner Settings</h2><p id="ownerIntro">Atur identitas pemilik dan aplikasi ini.</p><div id="ownerLogin" class="owner-fields"><label>PIN Owner<input id="ownerPinInput" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Masukkan PIN" maxlength="32"></label><div class="actions"><button class="btn primary" id="ownerLoginBtn">Masuk</button><button class="btn" id="ownerCloseBtn">Tutup</button></div><div class="owner-note">Pertama kali? Masukkan nama owner dan PIN baru lewat mode setup.</div></div><div id="ownerSetup" class="owner-fields hide"><label>Nama Owner<input id="setupOwnerName" maxlength="60" placeholder="Contoh: Angkasa"></label><label>Buat PIN Owner<input id="setupOwnerPin" type="password" inputmode="numeric" minlength="4" maxlength="32" placeholder="Minimal 4 karakter"></label><label>Ulangi PIN<input id="setupOwnerPin2" type="password" inputmode="numeric" maxlength="32" placeholder="Ulangi PIN"></label><div class="actions"><button class="btn primary" id="ownerSetupBtn">Simpan Owner</button><button class="btn" id="ownerSetupCloseBtn">Batal</button></div></div><div id="ownerSettings" class="owner-fields hide"><label>Nama Owner<input id="settingOwnerName" maxlength="60"></label><label>Nama Aplikasi<input id="settingAppName" maxlength="60"></label><label>Username Instagram<input id="settingInstagram" maxlength="40" placeholder="contoh: angkasa.creative"></label><label>Link Instagram (opsional)<input id="settingInstagramUrl" type="url" maxlength="200" placeholder="https://instagram.com/username"></label><label>Info Instagram yang tampil di halaman utama<input id="settingInstagramInfo" maxlength="100" placeholder="Contoh: Follow untuk update terbaru"></label><label>Default format foto<select id="settingFormat"><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/webp">WEBP</option></select></label><label>Kualitas ekspor foto <span id="settingQualityLabel">92%</span><input id="settingQuality" type="range" min="50" max="100" value="92"></label><label>Default resolusi video<select id="settingVideo"><option value="720">720p</option><option value="1080">1080p</option><option value="1440">1440p / 2K</option><option value="2160">2160p / 4K</option><option value="2x">2× resolusi asli</option></select></label><label>Ganti PIN Owner (opsional)<input id="settingNewPin" type="password" minlength="4" maxlength="32" placeholder="Kosongkan jika tidak diganti"></label><label>Konfirmasi PIN saat ini untuk menyimpan<input id="settingCurrentPin" type="password" maxlength="32" placeholder="PIN Owner saat ini"></label><div class="actions"><button class="btn primary" id="ownerSaveBtn">Simpan Pengaturan</button><button class="btn" id="ownerLogoutBtn">Keluar</button></div><div id="ownerStatus" class="status" aria-live="polite"></div><div class="owner-note">Pengaturan tersimpan di browser/perangkat ini. PIN lokal bukan perlindungan server dan dapat dihapus jika data browser dibersihkan.</div></div></div></div>
+
+<script>
+const $ = id => document.getElementById(id);
+// Owner settings are stored locally in this browser.
+const OWNER_KEY = "hdStudioOwnerSettingsV1";
+let ownerConfig = null, ownerUnlocked = false;
+try { ownerConfig = JSON.parse(localStorage.getItem(OWNER_KEY) || "null"); } catch(e) { ownerConfig = null; }
+function applyOwnerConfig(){
+  const app = ownerConfig?.appName?.trim() || "HD Studio";
+  const owner = ownerConfig?.ownerName?.trim() || "Owner";
+  document.title = app + " — Foto & Video";
+  $("appHeading").innerHTML = "";
+  const strong = document.createElement("span"); strong.textContent = app;
+  const sep = document.createElement("span"); sep.style.color = "var(--cyan)"; sep.textContent = " / ";
+  const rest = document.createElement("span"); rest.textContent = "Foto & Video";
+  $("appHeading").append(strong, sep, rest);
+  $("ownerSubtitle").textContent = ownerConfig ? "Owner: " + owner + " • Pemrosesan lokal di perangkat" : "Upscale lokal di browser • File tetap di perangkatmu";
+  $("footerBrand").textContent = app + " • Owner: " + owner;
+  const igBox = $("instagramPublic"); igBox.replaceChildren();
+  const igUser = (ownerConfig?.instagramUsername || "").trim().replace(/^@/, "");
+  const igInfo = (ownerConfig?.instagramInfo || "").trim();
+  let igUrl = (ownerConfig?.instagramUrl || "").trim();
+  if (!igUrl && igUser) igUrl = "https://www.instagram.com/" + encodeURIComponent(igUser) + "/";
+  if (igUrl && /^https:\/\/(www\.)?instagram\.com\//i.test(igUrl)) {
+    const link = document.createElement("a"); link.className="ig-link"; link.href=igUrl; link.target="_blank"; link.rel="noopener noreferrer";
+    link.textContent = "◎ Instagram" + (igUser ? " · @" + igUser : "") + (igInfo ? " — " + igInfo : ""); igBox.append(link);
+  } else if (igUser || igInfo) { const info=document.createElement("div"); info.className="ig-link"; info.textContent="◎ Instagram"+(igUser?" · @"+igUser:"")+(igInfo?" — "+igInfo:""); igBox.append(info); }
+  if(ownerConfig){ $("formatSelect").value = ownerConfig.format || "image/jpeg"; $("qualityRange").value = ownerConfig.quality || 92; $("qualityVal").textContent = $("qualityRange").value + "%"; $("videoResolution").value = ownerConfig.videoResolution || "1080"; }
+}
+function openOwner(){
+  $("ownerOverlay").classList.remove("hide"); $("ownerStatus").textContent=""; ownerUnlocked=false;
+  $("ownerLogin").classList.toggle("hide",!ownerConfig); $("ownerSetup").classList.toggle("hide",!!ownerConfig); $("ownerSettings").classList.add("hide");
+  $("ownerIntro").textContent = ownerConfig ? "Masukkan PIN untuk membuka pengaturan Owner." : "Setup pertama kali: buat nama Owner dan PIN untuk mengunci pengaturan lokal.";
+  $("ownerPinInput").value="";
+  if(ownerConfig){ $("settingOwnerName").value=ownerConfig.ownerName||"Owner"; $("settingAppName").value=ownerConfig.appName||"HD Studio"; $("settingFormat").value=ownerConfig.format||"image/jpeg"; $("settingQuality").value=ownerConfig.quality||92; $("settingQualityLabel").textContent=$("settingQuality").value+"%"; $("settingVideo").value=ownerConfig.videoResolution||"1080"; $("settingInstagram").value=ownerConfig.instagramUsername||""; $("settingInstagramUrl").value=ownerConfig.instagramUrl||""; $("settingInstagramInfo").value=ownerConfig.instagramInfo||""; $("settingNewPin").value=""; $("settingCurrentPin").value=""; }
+}
+$("ownerOpenBtn").addEventListener("click",openOwner);
+$("ownerCloseBtn").addEventListener("click",()=>$("ownerOverlay").classList.add("hide"));
+$("ownerSetupCloseBtn").addEventListener("click",()=>$("ownerOverlay").classList.add("hide"));
+$("ownerSetupBtn").addEventListener("click",()=>{
+  const name=$("setupOwnerName").value.trim()||"Owner", pin=$("setupOwnerPin").value, pin2=$("setupOwnerPin2").value;
+  if(pin.length<4){alert("PIN Owner minimal 4 karakter.");return;} if(pin!==pin2){alert("PIN tidak sama. Coba ulangi.");return;}
+  ownerConfig={ownerName:name,appName:"HD Studio",pin,format:"image/jpeg",quality:92,videoResolution:"1080",instagramUsername:"",instagramUrl:"",instagramInfo:""};
+  localStorage.setItem(OWNER_KEY,JSON.stringify(ownerConfig)); applyOwnerConfig(); ownerUnlocked=true;
+  $("ownerSetup").classList.add("hide"); $("ownerSettings").classList.remove("hide");
+  $("settingOwnerName").value=name; $("settingAppName").value=ownerConfig.appName; $("settingFormat").value=ownerConfig.format; $("settingQuality").value="92"; $("settingQualityLabel").textContent="92%"; $("settingVideo").value="1080"; $("settingInstagram").value=""; $("settingInstagramUrl").value=""; $("settingInstagramInfo").value=""; $("ownerIntro").textContent="Owner aktif. Silakan sesuaikan pengaturan aplikasi.";
+});
+$("ownerLoginBtn").addEventListener("click",()=>{
+  if($("ownerPinInput").value!==ownerConfig?.pin){alert("PIN Owner salah.");return;}
+  ownerUnlocked=true; $("ownerLogin").classList.add("hide"); $("ownerSettings").classList.remove("hide"); $("ownerIntro").textContent="Login berhasil. Ubah pengaturan lalu simpan.";
+});
+$("settingQuality").addEventListener("input",()=>$("settingQualityLabel").textContent=$("settingQuality").value+"%");
+$("ownerSaveBtn").addEventListener("click",()=>{
+  if(!ownerUnlocked || $("settingCurrentPin").value!==ownerConfig?.pin){alert("Masukkan PIN Owner saat ini dengan benar untuk menyimpan.");return;}
+  const nextPin=$("settingNewPin").value;
+  if(nextPin && nextPin.length<4){alert("PIN baru minimal 4 karakter.");return;}
+  const igUser=$("settingInstagram").value.trim().replace(/^@/, "");
+  let igUrl=$("settingInstagramUrl").value.trim();
+  if(igUrl && !/^https:\/\/(www\.)?instagram\.com\//i.test(igUrl)){alert("Link Instagram harus berupa URL https://www.instagram.com/...");return;}
+  if(!igUrl && igUser) igUrl="https://www.instagram.com/"+encodeURIComponent(igUser)+"/";
+  ownerConfig={...ownerConfig,ownerName:$("settingOwnerName").value.trim()||"Owner",appName:$("settingAppName").value.trim()||"HD Studio",format:$("settingFormat").value,quality:Number($("settingQuality").value),videoResolution:$("settingVideo").value,instagramUsername:igUser,instagramUrl:igUrl,instagramInfo:$("settingInstagramInfo").value.trim(),pin:nextPin||ownerConfig.pin};
+  localStorage.setItem(OWNER_KEY,JSON.stringify(ownerConfig)); applyOwnerConfig(); $("settingNewPin").value=""; $("settingCurrentPin").value=""; $("ownerStatus").textContent="Pengaturan Owner berhasil disimpan di browser ini.";
+});
+$("ownerLogoutBtn").addEventListener("click",()=>{ownerUnlocked=false;$("ownerOverlay").classList.add("hide");});
+$("year").textContent = new Date().getFullYear();
+applyOwnerConfig();
+function switchTab(which){
+  const photo = which === "photo";
+  $("photoPanel").classList.toggle("hide",!photo);
+  $("videoPanel").classList.toggle("hide",photo);
+  $("photoTab").classList.toggle("active",photo);
+  $("videoTab").classList.toggle("active",!photo);
+  $("photoTab").setAttribute("aria-selected",String(photo));
+  $("videoTab").setAttribute("aria-selected",String(!photo));
+}
+$("photoTab").addEventListener("click",()=>switchTab("photo"));
+$("videoTab").addEventListener("click",()=>switchTab("video"));
+$("sharpRange").addEventListener("input",()=> $("sharpVal").textContent=$("sharpRange").value+"%");
+$("qualityRange").addEventListener("input",()=> $("qualityVal").textContent=$("qualityRange").value+"%");
+
+let sourceImage = null, sourceImageURL = null, outputImageURL = null, outputCanvas = null;
+const imageInput=$("imageInput");
+imageInput.addEventListener("change",()=>loadImage(imageInput.files[0]));
+function loadImage(file){
+  if(!file)return;
+  if(!file.type.startsWith("image/")){setPhotoStatus("File ini bukan gambar yang didukung.");return;}
+  if(sourceImageURL)URL.revokeObjectURL(sourceImageURL);
+  sourceImageURL=URL.createObjectURL(file);
+  const img=new Image();
+  img.onload=()=>{
+    sourceImage=img;
+    $("imagePreview").replaceChildren(img.cloneNode());
+    $("imagePreview").querySelector("img").alt="Pratinjau foto asli";
+    $("enhanceBtn").disabled=false;
+    $("imageInfo").textContent=`Ukuran asli: ${img.naturalWidth} × ${img.naturalHeight} px. Pilih skala lalu tekan Proses Foto.`;
+    $("imageResult").innerHTML='<div class="empty">Tekan “Proses Foto” untuk membuat hasil.</div>';
+    $("downloadImageBtn").disabled=true;
+    setPhotoStatus("Foto siap diproses.");
+    $("photoMeter").style.width="0%";
+  };
+  img.onerror=()=>setPhotoStatus("Foto gagal dibuka. Coba file gambar lain.");
+  img.src=sourceImageURL;
+}
+const imageDrop=$("imageDrop");
+["dragenter","dragover"].forEach(evt=>imageDrop.addEventListener(evt,e=>{e.preventDefault();imageDrop.classList.add("drag")}));
+["dragleave","drop"].forEach(evt=>imageDrop.addEventListener(evt,e=>{e.preventDefault();imageDrop.classList.remove("drag")}));
+imageDrop.addEventListener("drop",e=>loadImage(e.dataTransfer.files[0]));
+function setPhotoStatus(s){$("photoStatus").textContent=s;}
+function sharpen(ctx,w,h,amount){
+  if(amount<=0)return;
+  // Unsharp mask sederhana. Dibatasi agar pemrosesan tidak menghabiskan memori.
+  const imageData=ctx.getImageData(0,0,w,h), src=imageData.data;
+  const copy=new Uint8ClampedArray(src);
+  const strength=amount/100*.65;
+  for(let y=1;y<h-1;y++){
+    for(let x=1;x<w-1;x++){
+      const i=(y*w+x)*4;
+      for(let c=0;c<3;c++){
+        const blur=(copy[i-4+c]+copy[i+4+c]+copy[i-w*4+c]+copy[i+w*4+c])/4;
+        src[i+c]=Math.max(0,Math.min(255,copy[i+c]+(copy[i+c]-blur)*strength));
+      }
+    }
+  }
+  ctx.putImageData(imageData,0,0);
+}
+$("enhanceBtn").addEventListener("click",()=>{
+  if(!sourceImage)return;
+  const btn=$("enhanceBtn");btn.disabled=true;
+  setPhotoStatus("Memproses foto…");$("photoMeter").style.width="15%";
+  setTimeout(()=>{
+    try{
+      const mode=$("scaleSelect").value, ow=sourceImage.naturalWidth, oh=sourceImage.naturalHeight;
+      let w,h;
+      if(mode==="1080"||mode==="1920"){
+        const max=Number(mode), ratio=Math.min(max/Math.max(ow,oh),max/Math.min(ow,oh));
+        // Opsi panjang sisi: selalu target sisi terpanjang, memperbesar atau memperkecil sesuai pilihan.
+        const scale=max/Math.max(ow,oh);w=Math.max(1,Math.round(ow*scale));h=Math.max(1,Math.round(oh*scale));
+      }else{w=Math.round(ow*Number(mode));h=Math.round(oh*Number(mode));}
+      const maxPixels=24000000;
+      if(w*h>maxPixels){const fit=Math.sqrt(maxPixels/(w*h));w=Math.floor(w*fit);h=Math.floor(h*fit);setPhotoStatus("Output dibatasi menjadi 24 megapiksel agar browser lebih stabil.");}
+      const canvas=document.createElement("canvas");canvas.width=w;canvas.height=h;
+      const ctx=canvas.getContext("2d",{willReadFrequently:true});
+      ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality="high";
+      ctx.drawImage(sourceImage,0,0,w,h);$("photoMeter").style.width="60%";
+      sharpen(ctx,w,h,Number($("sharpRange").value));
+      const mime=$("formatSelect").value, quality=Number($("qualityRange").value)/100;
+      canvas.toBlob(blob=>{
+        if(!blob){setPhotoStatus("Gagal membuat file. Coba format JPG atau resolusi lebih kecil.");btn.disabled=false;return;}
+        if(outputImageURL)URL.revokeObjectURL(outputImageURL);
+        outputImageURL=URL.createObjectURL(blob);outputCanvas=canvas;
+        const out=new Image();out.src=outputImageURL;out.alt="Foto hasil pemrosesan HD";
+        $("imageResult").replaceChildren(out);
+        $("downloadImageBtn").disabled=false;
+        $("downloadImageBtn").onclick=()=>{
+          const a=document.createElement("a");a.href=outputImageURL;
+          const ext=mime==="image/png"?"png":mime==="image/webp"?"webp":"jpg";
+          a.download=`foto-hd-${w}x${h}.${ext}`;a.click();
+        };
+        $("imageInfo").textContent=`Asli: ${ow} × ${oh} px  →  Hasil: ${w} × ${h} px • ${(blob.size/1024/1024).toFixed(2)} MB`;
+        $("photoMeter").style.width="100%";setPhotoStatus("Selesai! Foto HD siap disimpan.");btn.disabled=false;
+      },mime,quality);
+    }catch(err){setPhotoStatus("Memori perangkat mungkin tidak cukup. Pilih skala lebih rendah.");btn.disabled=false;}
+  },40);
+});
+$("resetPhotoBtn").addEventListener("click",()=>{
+  imageInput.value="";sourceImage=null;
+  if(sourceImageURL)URL.revokeObjectURL(sourceImageURL);sourceImageURL=null;
+  if(outputImageURL)URL.revokeObjectURL(outputImageURL);outputImageURL=null;
+  $("imagePreview").innerHTML='<div class="empty">Foto asli akan tampil di sini.</div>';
+  $("imageResult").innerHTML='<div class="empty">Hasil HD akan muncul di sini.</div>';
+  $("imageInfo").textContent="Pilih foto untuk melihat ukuran asli dan perkiraan ukuran output.";
+  $("enhanceBtn").disabled=true;$("downloadImageBtn").disabled=true;$("photoMeter").style.width="0%";setPhotoStatus("");
+});
+
+let inputVideo=null,inputVideoURL=null,outputVideoURL=null,recorder=null,stopRequested=false,rafId=null;
+$("videoInput").addEventListener("change",()=>loadVideo($("videoInput").files[0]));
+const videoDrop=$("videoDrop");
+["dragenter","dragover"].forEach(evt=>videoDrop.addEventListener(evt,e=>{e.preventDefault();videoDrop.classList.add("drag")}));
+["dragleave","drop"].forEach(evt=>videoDrop.addEventListener(evt,e=>{e.preventDefault();videoDrop.classList.remove("drag")}));
+videoDrop.addEventListener("drop",e=>loadVideo(e.dataTransfer.files[0]));
+function setVideoStatus(s){$("videoStatus").textContent=s;}
+function loadVideo(file){
+  if(!file)return;
+  if(!file.type.startsWith("video/")){setVideoStatus("File ini bukan video yang didukung.");return;}
+  if(inputVideoURL)URL.revokeObjectURL(inputVideoURL);
+  inputVideoURL=URL.createObjectURL(file);
+  const video=document.createElement("video");video.src=inputVideoURL;video.controls=true;video.playsInline=true;video.preload="metadata";
+  video.onloadedmetadata=()=>{
+    inputVideo=video;$("videoPreview").replaceChildren(video);
+    $("processVideoBtn").disabled=false;
+    setVideoStatus(`Video siap • ${video.videoWidth} × ${video.videoHeight} px • ${Number.isFinite(video.duration)?Math.round(video.duration)+" detik":"durasi tidak diketahui"}`);
+    $("videoMeter").style.width="0%";
+  };
+  video.onerror=()=>setVideoStatus("Browser tidak dapat membaca video ini. Coba MP4 H.264 atau WEBM.");
+}
+function chooseVideoSize(video){
+  const val=$("videoResolution").value, ow=video.videoWidth, oh=video.videoHeight;
+  let w,h;
+  if(val==="2x"){const scale=Math.min(2,2160/Math.max(ow,oh));w=Math.round(ow*scale);h=Math.round(oh*scale);}
+  else{const target=Number(val),scale=target/Math.max(ow,oh);w=Math.round(ow*scale);h=Math.round(oh*scale);}
+  // Canvas lebih kompatibel dengan dimensi genap.
+  w=Math.max(2,w-w%2);h=Math.max(2,h-h%2);
+  return {w,h};
+}
+$("processVideoBtn").addEventListener("click",async()=>{
+  if(!inputVideo)return;
+  if(!("MediaRecorder" in window)||!HTMLCanvasElement.prototype.captureStream){setVideoStatus("Browser ini belum mendukung ekspor video canvas. Coba Chrome versi terbaru.");return;}
+  const processBtn=$("processVideoBtn");processBtn.disabled=true;$("stopVideoBtn").disabled=false;stopRequested=false;
+  try{
+    const {w,h}=chooseVideoSize(inputVideo), canvas=document.createElement("canvas");canvas.width=w;canvas.height=h;
+    const ctx=canvas.getContext("2d");ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality="high";
+    const fps=Number($("videoFps").value), stream=canvas.captureStream(fps);
+    // Audio ditambahkan bila browser menyediakan captureStream pada elemen video.
+    try{
+      const capture=inputVideo.captureStream?inputVideo.captureStream():inputVideo.mozCaptureStream?inputVideo.mozCaptureStream():null;
+      if(capture)capture.getAudioTracks().forEach(track=>stream.addTrack(track));
+    }catch(e){}
+    const mimeTypes=["video/webm;codecs=vp9,opus","video/webm;codecs=vp8,opus","video/webm"];
+    const mime=mimeTypes.find(t=>MediaRecorder.isTypeSupported(t))||"";
+    recorder=new MediaRecorder(stream,{...(mime?{mimeType:mime}:{}),videoBitsPerSecond:Number($("videoBitrate").value)*1000000});
+    const chunks=[];
+    recorder.ondataavailable=e=>{if(e.data&&e.data.size)chunks.push(e.data);};
+    recorder.onerror=()=>setVideoStatus("Terjadi masalah saat merekam video. Coba bitrate lebih rendah.");
+    const finished=new Promise(resolve=>recorder.onstop=()=>resolve());
+    recorder.start(1000);
+    inputVideo.pause();inputVideo.currentTime=0;
+    await inputVideo.play();
+    const draw=()=>{
+      if(stopRequested||recorder.state!=="recording")return;
+      ctx.fillStyle="#000";ctx.fillRect(0,0,w,h);
+      // Cover fit: menjaga rasio aspek video tanpa meregangkan gambar.
+      const scale=Math.min(w/inputVideo.videoWidth,h/inputVideo.videoHeight);
+      const dw=inputVideo.videoWidth*scale,dh=inputVideo.videoHeight*scale;
+      ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality="high";
+      ctx.drawImage(inputVideo,(w-dw)/2,(h-dh)/2,dw,dh);
+      if(Number.isFinite(inputVideo.duration)&&inputVideo.duration>0){
+        const p=Math.min(99,Math.round(inputVideo.currentTime/inputVideo.duration*100));
+        $("videoMeter").style.width=p+"%";setVideoStatus(`Mengekspor ${w} × ${h} px • ${p}% • biarkan tab tetap terbuka.`);
+      }
+      if(inputVideo.ended){if(recorder.state==="recording")recorder.stop();return;}
+      rafId=requestAnimationFrame(draw);
+    };
+    inputVideo.onended=()=>{if(recorder&&recorder.state==="recording")recorder.stop();};
+    draw();
+    $("stopVideoBtn").onclick=()=>{stopRequested=true;if(rafId)cancelAnimationFrame(rafId);if(recorder&&recorder.state==="recording")recorder.stop();inputVideo.pause();};
+    await finished;
+    stream.getTracks().forEach(t=>t.stop());
+    if(chunks.length){
+      const blob=new Blob(chunks,{type:recorder.mimeType||"video/webm"});
+      if(outputVideoURL)URL.revokeObjectURL(outputVideoURL);
+      outputVideoURL=URL.createObjectURL(blob);
+      const out=document.createElement("video");out.src=outputVideoURL;out.controls=true;out.playsInline=true;
+      $("videoResult").replaceChildren(out);
+      const link=$("downloadVideoBtn");link.href=outputVideoURL;link.download="video-hd.webm";link.style.pointerEvents="auto";link.style.opacity="1";
+      $("videoMeter").style.width="100%";
+      setVideoStatus(`Ekspor selesai • ${(blob.size/1024/1024).toFixed(1)} MB • ${w} × ${h} px`);
+    }else setVideoStatus("Belum ada data video yang dihasilkan. Coba ulangi.");
+  }catch(err){
+    setVideoStatus("Ekspor gagal atau dihentikan browser. Coba resolusi/bitrate lebih rendah dan pastikan tab tetap terbuka.");
+  }finally{
+    $("processVideoBtn").disabled=false;$("stopVideoBtn").disabled=true;
+    if(inputVideo)inputVideo.pause();
+  }
+});
+</script>
+</body>
+</html>
